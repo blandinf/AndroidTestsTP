@@ -4,6 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.avatarfirst.avatargenlib.AvatarConstants
+import com.avatarfirst.avatargenlib.AvatarGenerator
 import com.blandinf.androidtesttp.R
 import com.blandinf.androidtesttp.databinding.ItemListUsersBinding
 import com.blandinf.androidtesttp.models.User
@@ -28,10 +30,8 @@ class ListUsersAdapter(items: List<User>, private val callback: ListUsersHandler
 
         val context = binding.root.context
         Glide.with(context)
-            .load(user.avatarUrl)
-            .apply(RequestOptions.circleCropTransform())
-            .placeholder(R.drawable.ic_person)
-            .error(R.drawable.ic_person)
+            .load("http://brokenfortest")
+            .placeholder(AvatarGenerator.avatarImage(context, 200, AvatarConstants.CIRCLE, user.login))
             .skipMemoryCache(false)
             .into(holder.binding.itemListUserAvatar)
 

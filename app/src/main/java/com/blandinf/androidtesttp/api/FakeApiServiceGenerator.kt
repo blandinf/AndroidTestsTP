@@ -9,7 +9,7 @@ object FakeApiServiceGenerator {
     }
 
     val FAKE_USERS: MutableList<User> = mutableListOf(
-        User("001", "Jake", "https://api.adorable.io/AVATARS/512/1.png"),
+        User("001", "Jake", "https://getavataaars.com/?random"),
         User("002", "Paul", "https://api.adorable.io/AVATARS/512/2.png"),
         User("003", "Phil", "https://api.adorable.io/AVATARS/512/3.png"),
         User("004", "Guillaume", "https://api.adorable.io/AVATARS/512/4.png"),
